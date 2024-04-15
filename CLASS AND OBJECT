@@ -1,0 +1,70 @@
+//program in C++ that demonstrates the creation and usage of a class and objects:(~0827CY221016)
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Define a class called Student
+class Student {
+private:
+    string name;
+    int age;
+    double gpa;
+
+public:
+    // Constructor
+    Student(string name, int age, double gpa) {
+        this->name = name;
+        this->age = age;
+        this->gpa = gpa;
+    }
+
+    // Member functions
+    void displayInfo() {
+        cout << "Name: " << name << ", Age: " << age << ", GPA: " << gpa << endl;
+    }
+
+    double getGPA() {
+        return gpa;
+    }
+
+    void setGPA(double newGPA) {
+        gpa = newGPA;
+    }
+};
+
+int main() {
+    // Create an object of the Student class
+    Student student1("John Doe", 20, 3.8);
+
+    // Call member functions
+    student1.displayInfo();
+    cout << "John's current GPA: " << student1.getGPA() << endl;
+
+    // Update the GPA
+    student1.setGPA(4.0);
+    cout << "John's updated GPA: " << student1.getGPA() << endl;
+
+    // Create another object of the Student class
+    Student student2("Jane Smith", 22, 3.5);
+
+    // Call member function for the second object
+    student2.displayInfo();
+
+    return 0;
+}
+
+
+Output:
+
+Name: John Doe, Age: 20, GPA: 3.8
+John's current GPA: 3.8
+John's updated GPA: 4
+Name: Jane Smith, Age: 22, GPA: 3.5
+
+
+This program demonstrates how to define a class with member variables and member functions, create objects of that class, and use the member functions to access and modify
+the object's data. Each object has its own set of member variables, and the member functions can operate on those variables for the specific object.
+
+(~BY:ASHISH PRAJAPAT)
